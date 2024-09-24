@@ -114,7 +114,7 @@ export default function CodeCompiler() {
     setRunOutput("")
 
     try {
-      const saveInputResponse = await fetch('http://localhost:8080/saveInput', {
+      const saveInputResponse = await fetch('https://compilerrestapi.onrender.com/saveInput', {
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain',
@@ -126,7 +126,7 @@ export default function CodeCompiler() {
         throw new Error(`HTTP error! status: ${saveInputResponse.status}`)
       }
 
-      const executeResponse = await fetch('http://localhost:8080/mipsExecute', {
+      const executeResponse = await fetch('https://compilerrestapi.onrender.com/mipsExecute', {
         method: 'GET',
       })
 
