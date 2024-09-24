@@ -38,7 +38,7 @@ export default function CodeCompiler() {
       const data = await response.text()
       setOutput(data || 'No output received from the compiler.')
     } catch (e) {
-      setError(`An error occurred: ${e.message}`)
+      setError(`An error occurred: ${(e as Error).message}`)
     } finally {
       setIsCompiling(false)
     }
@@ -75,7 +75,7 @@ export default function CodeCompiler() {
       const data = await executeResponse.text()
       setRunOutput(data || 'No output received from running the code.')
     } catch (e) {
-      setError(`An error occurred while running the code: ${e.message}`)
+      setError(`An error occurred while running the code: ${(e as Error).message}`)
     } finally {
       setIsRunning(false)
     }
