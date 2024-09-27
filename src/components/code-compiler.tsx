@@ -127,6 +127,10 @@ export default function CodeCompiler() {
   }
 
   return (
+    <>
+    <head>
+      <title>Portfolio</title>
+    </head>
     <div className="flex flex-col h-screen">
       <div className="flex-grow flex overflow-hidden">
         <div className="w-1/3 p-2 overflow-auto bg-gray-50 border-r">
@@ -227,5 +231,6 @@ export default function CodeCompiler() {
         </div>
       </div>
     </div>
+    </>
   )
 }
