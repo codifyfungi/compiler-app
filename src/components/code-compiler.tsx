@@ -129,7 +129,7 @@ export default function CodeCompiler() {
   return (
     <>
     <head>
-      <title>Portfolio</title>
+      <title>Compiler</title>
     </head>
     <div className="flex flex-col h-screen">
       <div className="flex-grow flex overflow-hidden">
